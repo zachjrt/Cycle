@@ -15,6 +15,7 @@ class Snake(Actor):
     def __init__(self):
         super().__init__()
         self._segments = []
+        self._tail_color = 0 # constants.GREEN
         # self.prepare_body()
 
     def get_segments(self):
@@ -30,7 +31,8 @@ class Snake(Actor):
             previous = self._segments[i - 1]
             velocity = previous.get_velocity()
             trailing.set_velocity(velocity)
-
+        if self._segments[i].get_color() != constants.WHITE:
+            self.grow_tail(1)
     def get_head(self):
         return self._segments[0]
 
@@ -45,27 +47,29 @@ class Snake(Actor):
             segment.set_position(position)
             segment.set_velocity(velocity)
             segment.set_text("#")
-            segment.set_color(constants.GREEN)
+            segment.set_color(self._tail_color)
             self._segments.append(segment)
 
     def turn_head(self, velocity):
         self._segments[0].set_velocity(velocity)
     
     def prepare_body(self, player):
-        x_pos = 1.5 if player == "s1" else 2.5
-        tail_color = constants.GREEN if player == "s1" else constants.RED
+        x_pos = 1 if player == "s1" else 3
+        self._tail_color = constants.GREEN if player == "s1" else constants.RED
 
-        x = int(constants.MAX_X / x_pos)
-        y = int(constants.MAX_Y / x_pos)
+        # x = int(constants.MAX_X / x_pos)
+        # y = int(constants.MAX_Y / x_pos)
+        x= 150 * x_pos
+        y = 150 * x_pos
 
         for i in range(constants.SNAKE_LENGTH):
             position = Point(x - i * constants.CELL_SIZE, y)
             velocity = Point(1 * constants.CELL_SIZE, 0)
             text = "8" if i == 0 else "#"
-            color = constants.YELLOW if i == 0 else tail_color
+            color = constants.YELLOW if i == 0 else self._tail_color
             
             segment = Actor()
-            segment.set_position(position)
+            segment.set_position(position)   # 
             segment.set_velocity(velocity)
             segment.set_text(text)
             segment.set_color(color)

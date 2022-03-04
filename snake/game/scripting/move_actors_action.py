@@ -1,5 +1,5 @@
 from game.scripting.action import Action
-
+import time
 
 class MoveActorsAction(Action):
     """
@@ -18,4 +18,5 @@ class MoveActorsAction(Action):
         """
         actors = cast.get_all_actors()
         for actor in actors:
+            time.sleep(0.05)
             actor.move_next()

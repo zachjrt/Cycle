@@ -47,7 +47,7 @@ class ControlActorsAction(Action):
             self._direction = Point(0, constants.CELL_SIZE)
         
         cycle = cast.get_first_actor("cycles")
-        cycle.turn_head(self._direction)
+        cycle.turn_body(self._direction)
 
         if self._keyboard_service.is_key_down('j'):
             self._direction2 = Point(-constants.CELL_SIZE, 0)
@@ -59,4 +59,4 @@ class ControlActorsAction(Action):
             self._direction2 = Point(0, constants.CELL_SIZE)
         
         cycle2 = cast.get_first_actor("cycles2")
-        cycle2.turn_head(self._direction2)
+        cycle2.turn_body(self._direction2)

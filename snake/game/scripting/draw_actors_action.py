@@ -1,4 +1,7 @@
+
 from game.scripting.action import Action
+from game.shared.point import Point
+import constants
 
 
 class DrawActorsAction(Action):
@@ -27,6 +30,10 @@ class DrawActorsAction(Action):
             script (Script): The script of Actions in the game.
         """
         score = cast.get_first_actor("scores")
+        score.set_text(f"Player One: {score._points}")
+        score2 = cast.get_first_actor("scores2")
+        score2.set_text(f"Player Two: {score2._points}")
+        score2.set_position(Point((constants.MAX_X - 200), 0))
         # food = cast.get_first_actor("foods")
         cycle = cast.get_first_actor("cycles")
         segments = cycle.get_segments()
@@ -39,5 +46,6 @@ class DrawActorsAction(Action):
         self._video_service.draw_actors(segments)
         self._video_service.draw_actors(segments2)
         self._video_service.draw_actor(score)
+        self._video_service.draw_actor(score2)
         self._video_service.draw_actors(messages, True)
         self._video_service.flush_buffer()

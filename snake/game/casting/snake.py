@@ -33,6 +33,7 @@ class Snake(Actor):
             trailing.set_velocity(velocity)
         if self._segments[i].get_color() != constants.WHITE:
             self.grow_tail(1)
+
     def get_head(self):
         return self._segments[0]
 

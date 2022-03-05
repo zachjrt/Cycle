@@ -28,10 +28,10 @@ class DrawActorsAction(Action):
         """
         score = cast.get_first_actor("scores")
         # food = cast.get_first_actor("foods")
-        snake = cast.get_first_actor("snakes")
-        segments = snake.get_segments()
-        snake2 = cast.get_first_actor("snakes2")
-        segments2 = snake2.get_segments()
+        cycle = cast.get_first_actor("cycles")
+        segments = cycle.get_segments()
+        cycle2 = cast.get_first_actor("cycles2")
+        segments2 = cycle2.get_segments()
         messages = cast.get_actors("messages")
 
         self._video_service.clear_buffer()

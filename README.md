@@ -32,4 +32,8 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your name and email here
+Mallory Lee : 
+Cristian Fernandez: 
+Zachary Thompson : 
+Nathanael Budge : 
+Oliverio Forentino Cameron Muñoz : 

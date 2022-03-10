@@ -35,5 +35,5 @@ root                    (project root folder)
 Mallory Lee : 
 Cristian Fernandez: 
 Zachary Thompson : 
-Nathanael Budge : 
+Nathanael Budge : Removed unecessary code, helped brainstorm needed classes for code functionality and requirements
 Oliverio Forentino Cameron Muñoz : 

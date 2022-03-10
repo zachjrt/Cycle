@@ -29,15 +29,16 @@ class HandleCollisionsAction(Action):
             self._handle_segment_collision(cast)
             self._handle_game_over(cast)
 
-    def _handle_food_collision(self, cast):
-        """Updates the score and moves the food if the cycle collides with the food.
+    # def _handle_food_collision(self, cast):
+    #     """Updates the score and moves the food if the cycle collides with the food.
         
-        Args:
-            cast (Cast): The cast of Actors in the game.
-        """
-        # score = cast.get_first_actor("scores")
-        # cycle = cast.get_first_actor("cycles")
-        # head = cycle.get_head()
+    #     Args:
+    #         cast (Cast): The cast of Actors in the game.
+    #     """
+    #     # score = cast.get_first_actor("scores")
+    #     # cycle = cast.get_first_actor("cycles")
+    #     # head = cycle.get_head()
+
     
     def _handle_segment_collision(self, cast):
         """Sets the game over flag if the cycle collides with one of its segments.
@@ -58,8 +59,6 @@ class HandleCollisionsAction(Action):
             if head.get_position().equals(segment.get_position()) or head2.get_position().equals(segment.get_position()):
                 self._is_game_over = True
                 break
-
-        
 
 
     def _handle_game_over(self, cast):

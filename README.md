@@ -32,7 +32,7 @@ root                    (project root folder)
 
 ## Authors
 ---
-Mallory Lee : 
+Mallory Lee : Developed control_actors_action to keeping scores for both snake 1 and snake 2.
 Cristian Fernandez: 
 Zachary Thompson : Created second score, Updated cycle bodies, made the naming conventions more consistent and follow requirements, added notes, created readme
 Nathanael Budge : Removed unecessary code, helped brainstorm needed classes for code functionality and requirements

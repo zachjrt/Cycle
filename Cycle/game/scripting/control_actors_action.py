@@ -6,7 +6,7 @@ from game.casting.cast import Cast
 
 class ControlActorsAction(Action):
     """
-    An input action that controls the cycles.
+    An input action that controls the cycles and keeping scores for both snakes (cyles)
     
     The responsibility of ControlActorsAction is to get the direction and move the cycles forward.
 

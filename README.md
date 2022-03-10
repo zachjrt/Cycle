@@ -34,6 +34,6 @@ root                    (project root folder)
 ---
 Mallory Lee : 
 Cristian Fernandez: 
-Zachary Thompson : 
+Zachary Thompson : Created second score, Updated cycle bodies, made the naming conventions more consistent and follow requirements, added notes, created readme
 Nathanael Budge : Removed unecessary code, helped brainstorm needed classes for code functionality and requirements
 Oliverio Forentino Cameron Muñoz : 
